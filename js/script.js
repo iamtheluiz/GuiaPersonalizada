@@ -63,3 +63,9 @@ atualizar_informacao();
 
 //Intervalo da atualização
 setInterval(atualizar_informacao,1000);
+
+//Função que abre os itens
+document.getElementById("browse-button").onclick = function(){
+	document.getElementById("browse-itens").setAttribute("class","");
+	document.querySelector(".container").setAttribute("class","container blur");
+}
