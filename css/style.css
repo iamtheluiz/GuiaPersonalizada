@@ -1,0 +1,23 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: Arial;
+}
+.container{
+	background-image: url(../img/wallpaper1.jpg);
+	background-size: 135% auto;
+	background-repeat: no-repeat;
+}
+.time{
+	height: 100%;
+	display:flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	flex-direction: column !important;
+}
+.time .time-title,.time .time-clock,.time .time-date{
+	color:white;
+	text-shadow: 2px 2px black;
+	font-size:15pt;
+	margin:10px;
+}
