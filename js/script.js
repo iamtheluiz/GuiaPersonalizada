@@ -69,14 +69,33 @@ setInterval(atualizar_informacao,1000);
 
 //Função que abre os itens
 document.getElementById("browse-button").onclick = function(){
-	var button = document.getElementById("browse-button");
-	if(button.innerHTML == "keyboard_arrow_up"){
-		button.innerHTML = "keyboard_arrow_down";
+	var browse_button = document.getElementById("browse-button");
+	if(browse_button.innerHTML == "keyboard_arrow_up"){
+		browse_button.innerHTML = "keyboard_arrow_down";
 		document.getElementById("browse-itens").setAttribute("class","");
 		document.querySelector(".container").setAttribute("class","container blur");
+		document.querySelector("#weather-button").setAttribute("class","material-icons blur");
+		document.querySelector("#weather").setAttribute("class","blur");
 	}else{
-		button.innerHTML = "keyboard_arrow_up";
+		browse_button.innerHTML = "keyboard_arrow_up";
 		document.getElementById("browse-itens").setAttribute("class","display_none");
 		document.querySelector(".container").setAttribute("class","container");
+		document.querySelector("#weather-button").setAttribute("class","material-icons");
+		document.querySelector("#weather").setAttribute("class","");
+	}
+}
+
+/* Clima */
+document.getElementById("weather").onclick = function(){
+	var weather = document.getElementById("weather");
+	var weather_button = document.getElementById("weather-button");
+	if(weather_button.innerHTML == "cloud"){
+		weather_button.innerHTML = "keyboard_arrow_left";
+		weather.setAttribute("style","margin-left:500px;");
+		document.getElementById("weather-itens").setAttribute("class","");
+	}else{
+		weather_button.innerHTML = "cloud";
+		document.getElementById("weather-itens").setAttribute("class","display_none");
+		weather.removeAttribute("style");
 	}
 }

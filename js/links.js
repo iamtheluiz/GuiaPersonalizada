@@ -44,7 +44,7 @@ for(var c = 0; c <= links.length - 1; c++){
 	link.setAttribute("target","_blank");
 
 	var div = document.createElement("div");
-	div.setAttribute("class","item col");
+	div.setAttribute("class","item item_col");
 
 	var img = document.createElement("img");
 	img.setAttribute("src",links[c]["img"]);

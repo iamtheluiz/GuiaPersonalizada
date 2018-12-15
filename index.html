@@ -2,8 +2,8 @@
 <html lang="pt-br">
 	<head>
 		<link href="css/material_icons.css" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 		<meta charset="UTF-8">
 		<title>Bem-vindo Luiz!</title>
 	</head>
@@ -21,15 +21,34 @@
 				</div>
 			</div>
 		</div>
+		<!-- Clima -->
+		<div id="weather-itens" class="display_none">
+			<div class="main">
+				<i class="material-icons">cloud</i>
+				<span id="weather-location"></span>
+				<span id="weather-temp"></span>
+			</div>
+			<div>
+				<a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img style="position:absolute; bottom:0;right:0;" src="https://poweredby.yahoo.com/white.png" width="134" height="29"/> </a>
+			</div>
+		</div>
+		<div id="weather">
+			<i id="weather-button" class="material-icons">cloud</i>
+		</div>
+		<!-- Fim do Clima -->
+
+		<!-- Gaveta de Itens -->
 		<div id="browse-itens" class="display_none">
 			
 		</div>
 		<div class="browse">
 			<i id="browse-button" class="material-icons">keyboard_arrow_up</i>
 		</div>
-		<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/links.js"></script>
+		<!-- Fim da Gaveta de Itens -->
+
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/links.js"></script>
+		<script type="text/javascript" src="js/weather.js"></script>
+		<script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='São Paulo, sp') and u = 'c'&format=json&callback=callbackFunction"></script>
 	</body>
 </html>
