@@ -4,6 +4,9 @@ var date_div = document.getElementById("time-date");
 var display_div = document.getElementById("time-display");
 var text_div = document.getElementById("time-text");
 
+//Coloca o nome da pessoa no titulo
+document.querySelector("title").innerHTML = "Bem-vindo "+nome;
+
 function atualizar_informacao(){
 	var data = new Date();
 	var dias = new Array(
