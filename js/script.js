@@ -66,6 +66,14 @@ setInterval(atualizar_informacao,1000);
 
 //Função que abre os itens
 document.getElementById("browse-button").onclick = function(){
-	document.getElementById("browse-itens").setAttribute("class","");
-	document.querySelector(".container").setAttribute("class","container blur");
+	var button = document.getElementById("browse-button");
+	if(button.innerHTML == "keyboard_arrow_up"){
+		button.innerHTML = "keyboard_arrow_down";
+		document.getElementById("browse-itens").setAttribute("class","");
+		document.querySelector(".container").setAttribute("class","container blur");
+	}else{
+		button.innerHTML = "keyboard_arrow_up";
+		document.getElementById("browse-itens").setAttribute("class","display_none");
+		document.querySelector(".container").setAttribute("class","container");
+	}
 }
