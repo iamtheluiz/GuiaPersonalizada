@@ -89,17 +89,18 @@
 	color:white;
 }
 #weather-itens .main i{
-	font-size: 8rem;
+	margin-top:15px;
+	font-size: 6.2rem;
 	float:left;
 }
-#weather-itens .main #weather-location{
-	font-size:30pt;
+#weather-itens .main #weather-name{
+	font-size:25pt;
 	float:left;
-	margin-top:10px;
-	margin-left:10px;
+	margin-left:20px;
 }
-#weather-itens .main #weather-temp{
-	font-size:30pt;
+#weather-itens .main #weather-location, #weather-itens .main #weather-temp{
+	font-size:18pt;
 	float:left;
-	margin-left:10px;
+	margin-left:20px;
+	width: 100%;
 }

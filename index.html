@@ -2,6 +2,8 @@
 <html lang="pt-br">
 	<head>
 		<link href="css/material_icons.css" rel="stylesheet">
+		<link href="css/weather-icons.min.css" rel="stylesheet">
+		<link href="css/weather-icons-wind.min.css" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 		<meta charset="UTF-8">
@@ -24,9 +26,12 @@
 		<!-- Clima -->
 		<div id="weather-itens" class="display_none">
 			<div class="main">
-				<i class="material-icons">cloud</i>
-				<span id="weather-location"></span>
-				<span id="weather-temp"></span>
+				<i id="weather-icon" class="wi wi-night-sleet"></i>
+				<span id="weather-name"></span>
+				<div style="float:left;width: 350px;">
+					<span id="weather-location"></span>
+					<span id="weather-temp"></span>
+				</div>
 			</div>
 			<div>
 				<a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img style="position:absolute; bottom:0;right:0;" src="https://poweredby.yahoo.com/white.png" width="134" height="29"/> </a>
